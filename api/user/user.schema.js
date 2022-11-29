@@ -10,13 +10,14 @@ const ParamsSchema = Joi.object({
 const PayloadSchema = Joi.object().keys({
   email: Joi.string().required(),
   password: Joi.string().min(8).max(100).required(),
-  name: Joi.string(),
+  name: Joi.string().required(),
   ruc: Joi.string(),
   description: Joi.string(),
   phone: Joi.string(),
   cellphone: Joi.string(),
   whatsapp: Joi.string(),
-  active: Joi.boolean().default(false)
+  active: Joi.boolean().default(false),
+  category: Joi.string()
 });
 
 
