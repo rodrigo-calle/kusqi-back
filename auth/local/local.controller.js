@@ -31,10 +31,10 @@ async function loginUserHandler(req, res) {
     const token = signToken(user.businessProfile);
     res.status(200).json({ token });
   } catch (err) {
-    console.log('error en la consola')
+      console.log('error en la consola')
     res.status(400).json(err);
-    console.log('email', email)
-    console.log('password', password)
+      console.log('email', email)
+      console.log('password', password)
   }
 }
 

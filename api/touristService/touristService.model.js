@@ -10,6 +10,10 @@ const TouristServicesSchema = mongoose.Schema({
   description: {
     type: String,
   },
+  active: {
+    type: Boolean,
+    default: true,
+  },
   user: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',

@@ -11,6 +11,7 @@ const client = require('./api/client');
 const vehicle = require('./api/vehicle');
 const touristGuide = require('./api/touristGuide');
 const touristService = require('./api/touristService');
+const touristPayment = require('./api/touristPayments')
 //defining routes
 
 function routes (app) {
@@ -28,6 +29,7 @@ function routes (app) {
   app.use('/api/vehicles', vehicle);
   app.use('/api/touristGuides', touristGuide);
   app.use('/api/touristService', touristService);
+  app.use('/api/touristPayment', touristPayment);
 }
 
 module.exports = routes;
