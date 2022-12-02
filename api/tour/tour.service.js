@@ -31,7 +31,11 @@ async function getTourById (id) {
 */
 
 async function getToursByUserId(id) {
-  const tours = await Tour.find({user: id});
+  const tours = await Tour.find({user: id})
+    .populate({path: 'vehicle'})
+    .populate({path: 'client'})
+    .populate({path: 'service'})
+    .populate({path: 'touristGuide'});
   return tours;
 
 }
