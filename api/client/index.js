@@ -7,6 +7,7 @@ const {
   getClientByUserIdHandler,
   deleteClientByIdHandler,
   updateClientHandler,
+  getClientByDniHandler,
 } = require('./client.controller')
 
 const router = Router();
@@ -15,6 +16,7 @@ const router = Router();
 
 router.get('/', getAllClientsHandler);
 router.get('/client/:id', getClientByIdHandler);
+router.get('/client/document/:dni', getClientByDniHandler);
 router.post('/', createClientHandler);
 router.patch('/client/edit/:id', updateClientHandler)
 

@@ -13,6 +13,16 @@ const Client = require('./client.model');
 
 
 /**
+ * Get client by dni
+ * @param {string} dni of client to be filtered
+ * @return client
+ */
+
+async function getClientByDni(dni) {
+  const client = Client.find({dni: dni});
+  return client;
+}
+/**
  * Get client by id
  * @param {string} id Indentifier of the client to be filtered
  * @returns client
@@ -78,5 +88,6 @@ module.exports = {
   createClient,
   updateClient,
   deleteClient,
+  getClientByDni
 }
 
